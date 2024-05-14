@@ -44,6 +44,16 @@ public class LinkedList {
 
     }
 
+    public int getSize() {
+        int size = 0;
+        Node current = head;
+        while (current != null) {
+            current = current.getNext();
+            size++;
+        }
+        return size;
+    }
+
     public void printLL() {
         Node current = head;
         while (current != null) {
@@ -61,7 +71,9 @@ public class LinkedList {
         myLl.insert(35);
         myLl.insert(40);
         myLl.printLL();
+        System.out.println("The current list size is: " + myLl.getSize());
         myLl.remove(20);
         myLl.printLL();
+        System.out.println("The current list size is: " + myLl.getSize());
     }
 }
