@@ -11,12 +11,14 @@ public class LinkedList {
     public void insert(int data) {
 
         if (this.head == null) {
-            this.head = new Node(data);
+            Node newNode = new Node(data);
+            this.head = newNode;
+            this.tail = newNode;
 
         } else {
             Node newNode = new Node(data);
-            newNode.setNext(head);
-            head = newNode;
+            tail.setNext(newNode);
+            tail = newNode;
         }
     }
 
